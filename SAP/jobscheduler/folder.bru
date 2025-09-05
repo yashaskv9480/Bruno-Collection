@@ -1,0 +1,21 @@
+meta {
+  name: jobscheduler
+  seq: 1
+}
+
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{jobscheduler_accessToken}}
+}
+
+vars:pre-request {
+  jobscheduler_url: https://jobscheduler-rest.cfapps.{{region}}.hana.ondemand.com
+}
+
+script:pre-request {
+  const tools = require('./scripts/login.oauth');
+  await tools.login("jobscheduler");
+}

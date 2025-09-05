@@ -1,0 +1,19 @@
+meta {
+  name: Get Notification Types
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/v2/NotificationType.svc/NotificationTypes
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-CSRF-Token: {{csrf_token}}
+}
+
+settings {
+  encodeUrl: true
+}

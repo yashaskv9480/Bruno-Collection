@@ -1,0 +1,50 @@
+meta {
+  name: Create Notifcation Type
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/v2/NotificationType.svc/NotificationTypes
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-CSRF-Token: {{csrf_token}}
+}
+
+body:json {
+  {
+    "NotificationTypeKey": "PaPMUserNotificationActivityStatusReport",
+    "Templates": [
+      {
+        "Language": "en",
+        "TemplateSensitive": "PaPM - Activity Status Report",
+        "TemplatePublic": "PaPM - Activity Status Report",
+        "TemplateGrouped": "PaPM - Activity Status Report",
+        "TemplateLanguage": "Mustache",
+        "Subtitle": "PaPM - Activity Status Report",
+        "EmailSubject": "PaPM - Activity Status Report",
+        "EmailHtml": "&lt;p&gt;Dear user,&lt;/p&gt;&lt;br /&gt;&lt;p&gt;This is to inform you that changes have been made to the activities below:&lt;/p&gt;{{emailContent}}&lt;br /&gt;&lt;p&gt;Best regards,&lt;/p&gt;&lt;p&gt;Notification Service for SAP Profitability and Performance Management Cloud &lt;/p&gt;&lt;br /&gt;&lt;i&gt;To unsubscribe from this email notification service, please adjust your settings under &lt;a href=&#39;{{userPreferencesLink}}&#39;&gt; User Preferences &gt; Notification Settings.&lt;/a&gt;&lt;/i&gt;"
+      }
+    ],
+    "DeliveryChannels": [
+      {
+        "Type": "MAIL",
+        "Enabled": true,
+        "DefaultPreference": true
+      },
+      {
+        "Type": "WEB",
+        "Enabled": false,
+        "DefaultPreference": false
+      }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,45 @@
+meta {
+  name: Send Notification
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/v2/Notification.svc/Notifications
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-CSRF-Token: {{csrf_token}}
+}
+
+body:json {
+  {
+      "NavigationTargetAction": "",
+      "NavigationTargetObject": "process-management",
+      "NotificationTypeKey": "PaPMPushNotificationActivityStatus",
+      "Properties": [
+          {
+              "Key": "activityName",
+              "Language": "en",
+              "Value": "{{#each emailContent}}{{#each this}}{{#if @first}}{{text}}{{/if}}{{/each}}{{/each}}"
+          },
+          {
+              "Key": "status",
+              "Language": "en",
+              "Value": "{{#each emailContent}}{{#if @first}}{{@key}}{{/if}}{{/each}}"
+          },
+          {
+              "Key": "url",
+              "Language": "en",
+              "Value": "{{#each emailContent}}{{#each this}}{{#if @first}}{{url}}{{/if}}{{/each}}{{/each}}"
+          }
+      ],
+      "Recipients":[{"RecipientId":"yashas.venkateshiah@sap.com"},{"RecipientId": "yashas.venkateshiah@msg-global.com"}]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

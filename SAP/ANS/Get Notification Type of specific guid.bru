@@ -1,0 +1,19 @@
+meta {
+  name: Get Notification Type of specific guid
+  type: http
+  seq: 8
+}
+
+get {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.ap10.hana.ondemand.com:443/v2/NotificationType.svc/NotificationTypes(guid'')/Templates
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-Csrf-Token: {{csrf_token}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Delete Notification Type
+  type: http
+  seq: 7
+}
+
+delete {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com:443/v2/NotificationType.svc/NotificationTypes(guid'')
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-CSRF-Token: {{csrf_token}}
+}
+
+settings {
+  encodeUrl: true
+}

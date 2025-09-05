@@ -1,0 +1,19 @@
+meta {
+  name: get csrf token
+  type: http
+  seq: 5
+}
+
+head {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/v2/Notification.svc
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-Csrf-Token: Fetch
+}
+
+settings {
+  encodeUrl: true
+}

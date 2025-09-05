@@ -1,0 +1,15 @@
+meta {
+  name: Get a Notification
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/v4/NotificationService.svc/Notifications
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

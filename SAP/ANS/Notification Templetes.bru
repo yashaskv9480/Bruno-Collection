@@ -1,0 +1,15 @@
+meta {
+  name: Notification Templetes
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/odatav2/NotificationTemplate.svc/NotificationTemplates
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
