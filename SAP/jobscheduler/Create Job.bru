@@ -6,8 +6,39 @@ meta {
 
 post {
   url: {{jobscheduler_url}}/scheduler/jobs
-  body: none
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name": "validateSalesOrder",
+    "description": "cron job that validates sales order requests",
+    "action": "http://salesOrderApp.hana.ondemand.com:40023/salesOrders/validate",
+    "active": true,
+    "httpMethod": "PUT",
+    "ansConfig": {
+       "onError": false,
+       "onSuccess": false
+        },
+    "calmConfig": {
+       "enabled": true
+        },
+    "schedules": [
+      {
+        "cron": "* * * * * */10 0",
+        "description": "this schedule runs every 10 minutes",
+        "data": {
+          "salesOrderId": "1234"
+        },
+        "active": true,
+        "startTime": {
+          "date": "2015-10-20 04:30 +0000",
+          "format": "YYYY-MM-DD HH:mm Z"
+        }
+      }
+    ]
+  }
 }
 
 settings {

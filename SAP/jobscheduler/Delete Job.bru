@@ -1,0 +1,19 @@
+meta {
+  name: Delete Job
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{jobscheduler_url}}/scheduler/jobs/:JobId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  JobId: 1622770
+}
+
+settings {
+  encodeUrl: true
+}
