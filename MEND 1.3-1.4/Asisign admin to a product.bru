@@ -1,0 +1,30 @@
+meta {
+  name: Asisign admin to a product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{MEND_BASE_URL_1.4}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {"requestType": "setProductAssignments",
+     "userKey": {{USER_KEY}},
+    "productToken": "{{DXI_PRODUCT_KEY}}",
+    "productAdmins" :
+    {
+    "userAssignments": [
+      {
+        "email": "yashas.venkateshiah@sap.com"
+      }
+    ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
