@@ -1,0 +1,26 @@
+meta {
+  name: Assign Integrator to product
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://sap.whitesourcesoftware.com/api/v1.4
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {"requestType": "setProductAssignments",
+     "userKey": {{USER_KEY}},
+    "productToken": {{DXI_PRODUCT_KEY}},
+    "productIntegrators" :
+    {
+      "userAssignments":[{"email":""}]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
