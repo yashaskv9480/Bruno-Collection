@@ -1,0 +1,15 @@
+meta {
+  name: Ping a request
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{jfrog_platform_url}}/api/system/ping
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

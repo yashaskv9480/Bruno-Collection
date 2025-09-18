@@ -1,0 +1,24 @@
+meta {
+  name: Move artifactory
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{jfrog_platform_url}}/artifactory/api/move/{{src_repo}}?to={{target_repo}}
+  body: json
+  auth: inherit
+}
+
+params:query {
+  to: {{target_repo}}
+}
+
+vars:pre-request {
+  src_repo: 
+  target_repo: 
+}
+
+settings {
+  encodeUrl: true
+}

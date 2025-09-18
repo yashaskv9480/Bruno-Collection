@@ -1,0 +1,31 @@
+meta {
+  name: Search on AQL
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{jfrog_platform_url}}/artifactory/api/search/aql
+  body: text
+  auth: inherit
+}
+
+headers {
+  Content-Type: text/plain
+}
+
+body:text {
+  items.find({
+        "repo":"{{repo_name}}",
+        "path":{"$match":"{{artifact_name}}"}
+      })
+}
+
+vars:pre-request {
+  repo_name: 
+  artifact_name: 
+}
+
+settings {
+  encodeUrl: true
+}

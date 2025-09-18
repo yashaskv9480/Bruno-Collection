@@ -1,0 +1,26 @@
+meta {
+  name: Artifacts Created in Date Range
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{jfrog_platform_url}}/artifactory/api/search/creation?repos={{repo_name}}&from=long&to=long
+  body: none
+  auth: inherit
+}
+
+params:query {
+  repos: {{repo_name}}
+  from: long
+  to: long
+  : 
+}
+
+vars:pre-request {
+  repo_name: 
+}
+
+settings {
+  encodeUrl: true
+}

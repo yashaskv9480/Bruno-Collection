@@ -1,0 +1,12 @@
+auth {
+  mode: basic
+}
+
+auth:basic {
+  username: {{process.env.jfrog_username_readonly}}
+  password: {{process.env.jfrog_password_readonly}}
+}
+
+vars:pre-request {
+  jfrog_platform_url: https://common.repositories.cloud.sap
+}

@@ -1,0 +1,30 @@
+meta {
+  name: Promote a image
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{jfrog_platform_url}}/api/docker/{{repo_name}}/v2/promote
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "targetRepo": "",
+    "dockerRepository": "",
+    "targetDockerRepository": "",
+    "tag": "",
+    "targetTag": "",
+    "copy": true
+  }
+}
+
+vars:pre-request {
+  repo_name: 
+}
+
+settings {
+  encodeUrl: true
+}

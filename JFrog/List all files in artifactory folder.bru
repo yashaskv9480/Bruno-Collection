@@ -1,0 +1,20 @@
+meta {
+  name: List all files in artifactory folder
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{jfrog_platform_url}}/artifactory/api/storage/{{repo_name}}/{{artifact_name}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  artifact_name: 
+  repo_name: 
+}
+
+settings {
+  encodeUrl: true
+}

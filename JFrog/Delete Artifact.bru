@@ -1,0 +1,20 @@
+meta {
+  name: Delete Artifact
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{jfrog_platform_url}}/artifactory/{{artifact_name}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  artifact_name: 
+  : 
+}
+
+settings {
+  encodeUrl: true
+}
