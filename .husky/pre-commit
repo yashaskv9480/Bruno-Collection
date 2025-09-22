@@ -1,0 +1,2 @@
+echo "Scanning for any secrets" >&2
+ggshield --config-path ggsheild_config.yaml secret scan pre-commit --all-secrets .

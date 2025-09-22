@@ -1,0 +1,11 @@
+version: 2
+
+max_commits_for_hook: 50 
+
+exit_zero: false
+
+verbose: true
+
+secret:
+  ignored_paths:
+    - '.env'
