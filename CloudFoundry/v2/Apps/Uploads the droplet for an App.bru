@@ -1,0 +1,19 @@
+meta {
+  name: Uploads the droplet for an App
+  type: http
+  seq: 22
+}
+
+put {
+  url: {{base_url}}/v2/apps/:guid/droplet/upload
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Uploads the droplet for an App
+}

@@ -1,0 +1,19 @@
+meta {
+  name: List all Domains for the Organization
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{base_url}}/v2/organizations/:guid/domains
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Domains for the Organization
+}

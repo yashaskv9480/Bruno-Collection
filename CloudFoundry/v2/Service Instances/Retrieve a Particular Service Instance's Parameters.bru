@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular Service Instance's Parameters
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/v2/service_instances/:guid/parameters
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular Service Instance's Parameters
+}

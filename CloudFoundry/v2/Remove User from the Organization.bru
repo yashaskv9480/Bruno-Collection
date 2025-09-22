@@ -1,0 +1,19 @@
+meta {
+  name: Remove User from the Organization
+  type: http
+  seq: 19
+}
+
+delete {
+  url: {{base_url}}/v2/organizations/:guid/users/:user_guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Remove User from the Organization
+}

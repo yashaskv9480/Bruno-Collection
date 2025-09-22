@@ -1,0 +1,15 @@
+meta {
+  name: Update Feature Flag
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{base_url}}/v3/feature_flags/:name
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

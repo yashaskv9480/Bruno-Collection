@@ -1,0 +1,15 @@
+meta {
+  name: Update Security Group
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{base_url}}/v3/security_groups/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

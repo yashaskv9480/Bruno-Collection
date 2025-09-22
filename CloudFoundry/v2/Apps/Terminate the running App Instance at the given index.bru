@@ -1,0 +1,19 @@
+meta {
+  name: Terminate the running App Instance at the given index
+  type: http
+  seq: 19
+}
+
+delete {
+  url: {{base_url}}/v2/apps/:guid/instances/:index
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Terminate the running App Instance at the given index
+}

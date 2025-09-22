@@ -1,0 +1,19 @@
+meta {
+  name: Removing a Security Group as a default for staging
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{base_url}}/v2/config/staging_security_groups/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Remove a Security Group as a default for staging
+}

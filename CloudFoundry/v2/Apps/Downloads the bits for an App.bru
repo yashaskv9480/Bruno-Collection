@@ -1,0 +1,19 @@
+meta {
+  name: Downloads the bits for an App
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/v2/apps/:guid/download
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Downloads the bits for an App
+}

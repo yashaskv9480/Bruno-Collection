@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve Job that is queued
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v2/jobs/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve Job that is queued
+}

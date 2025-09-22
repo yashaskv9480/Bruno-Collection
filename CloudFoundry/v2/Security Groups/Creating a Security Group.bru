@@ -1,0 +1,19 @@
+meta {
+  name: Creating a Security Group
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v2/security_groups
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Create a Security Group
+}

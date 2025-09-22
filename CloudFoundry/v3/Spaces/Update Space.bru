@@ -1,0 +1,15 @@
+meta {
+  name: Update Space
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{base_url}}/v3/spaces/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

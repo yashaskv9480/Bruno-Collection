@@ -1,0 +1,15 @@
+meta {
+  name: Get Env Var Group
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v3/environment_variable_groups/:name
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

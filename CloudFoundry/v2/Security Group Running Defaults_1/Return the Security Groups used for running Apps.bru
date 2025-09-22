@@ -1,0 +1,19 @@
+meta {
+  name: Return the Security Groups used for running Apps
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v2/config/running_security_groups
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Return the Security Groups used for running Apps
+}

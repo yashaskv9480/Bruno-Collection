@@ -1,0 +1,15 @@
+meta {
+  name: Get Space Quota
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/v3/space_quotas/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

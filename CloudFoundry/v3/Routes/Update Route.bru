@@ -1,0 +1,15 @@
+meta {
+  name: Update Route
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{base_url}}/v3/routes/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

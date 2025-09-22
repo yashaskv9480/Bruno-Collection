@@ -1,0 +1,19 @@
+meta {
+  name: Delete a Particular Service Binding
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{base_url}}/v2/service_bindings/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Delete a Particular Service Binding
+}

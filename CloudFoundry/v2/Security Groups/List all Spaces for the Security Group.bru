@@ -1,0 +1,19 @@
+meta {
+  name: List all Spaces for the Security Group
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/v2/security_groups/:guid/spaces
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Spaces for the Security Group
+}

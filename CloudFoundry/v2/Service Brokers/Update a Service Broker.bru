@@ -1,0 +1,19 @@
+meta {
+  name: Update a Service Broker
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/v2/service_brokers/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Update a Service Broker
+}

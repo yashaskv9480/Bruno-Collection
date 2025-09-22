@@ -1,0 +1,19 @@
+meta {
+  name: Get all feature flags
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v2/config/feature_flags
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get all feature flags
+}

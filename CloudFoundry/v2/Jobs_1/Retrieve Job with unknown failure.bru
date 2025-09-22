@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve Job with unknown failure
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/v2/jobs/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve Job with unknown failure
+}

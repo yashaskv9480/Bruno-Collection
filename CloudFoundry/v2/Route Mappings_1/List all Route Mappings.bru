@@ -1,0 +1,19 @@
+meta {
+  name: List all Route Mappings
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v2/route_mappings
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Route Mappings
+}

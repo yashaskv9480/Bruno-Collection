@@ -1,0 +1,15 @@
+meta {
+  name: Get Feature Flag
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v3/feature_flags/:name
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve Job that was successful
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v2/jobs/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve Job that was successful
+}

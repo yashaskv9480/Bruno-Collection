@@ -1,0 +1,15 @@
+meta {
+  name: Delete Droplet
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base_url}}/v3/droplets/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

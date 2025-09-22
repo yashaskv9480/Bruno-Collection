@@ -1,0 +1,19 @@
+meta {
+  name: List all App Usage Events
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v2/app_usage_events
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all App Usage Events
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular Route
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v2/routes/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular Route
+}

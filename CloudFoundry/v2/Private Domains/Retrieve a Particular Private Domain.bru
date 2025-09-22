@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular Private Domain
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/v2/private_domains/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular Private Domain
+}

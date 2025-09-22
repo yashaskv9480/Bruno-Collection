@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular Event
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v2/events/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular Event
+}

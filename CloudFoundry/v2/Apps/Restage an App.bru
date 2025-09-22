@@ -1,0 +1,19 @@
+meta {
+  name: Restage an App
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{base_url}}/v2/apps/:guid/restage
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Restage an App
+}

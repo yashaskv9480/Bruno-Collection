@@ -1,0 +1,19 @@
+meta {
+  name: Remove App from the Route
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/v2/routes/:guid/apps/:app_guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Remove App from the Route
+}

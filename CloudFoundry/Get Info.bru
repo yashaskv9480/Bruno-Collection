@@ -1,0 +1,15 @@
+meta {
+  name: Get Info
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.cf.{{region}}.hana.ondemand.com
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Purge and Reseed App Usage Events
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/v2/app_usage_events/destructively_purge_all_and_reseed_started_apps
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Purge and Reseed App Usage Events
+}

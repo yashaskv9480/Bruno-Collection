@@ -1,0 +1,19 @@
+meta {
+  name: List all matching resources
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/v2/resource_match
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all matching resources
+}

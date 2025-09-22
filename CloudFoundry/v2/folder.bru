@@ -1,0 +1,9 @@
+meta {
+  name: v2
+  seq: 3
+}
+
+script:pre-request {
+  const tools = require('./scripts/cf-login-token');
+  await tools.login();
+}

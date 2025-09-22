@@ -1,0 +1,15 @@
+meta {
+  name: Get Service Offering
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v3/service_offerings/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

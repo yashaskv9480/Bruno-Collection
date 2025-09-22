@@ -1,0 +1,15 @@
+meta {
+  name: Delete Organization
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/v3/organizations/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

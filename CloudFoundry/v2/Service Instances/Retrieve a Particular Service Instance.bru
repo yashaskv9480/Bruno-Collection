@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular Service Instance
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/v2/service_instances/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular Service Instance
+}

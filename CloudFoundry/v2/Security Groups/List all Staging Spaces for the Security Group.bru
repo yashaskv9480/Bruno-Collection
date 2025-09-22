@@ -1,0 +1,19 @@
+meta {
+  name: List all Staging Spaces for the Security Group
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/v2/security_groups/:guid/staging_spaces
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Staging Spaces for the Security Group
+}

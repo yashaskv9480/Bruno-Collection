@@ -1,0 +1,19 @@
+meta {
+  name: Get App summary
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/v2/apps/:guid/summary
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get App summary
+}

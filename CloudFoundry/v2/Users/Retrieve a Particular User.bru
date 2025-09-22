@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular User
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/v2/users/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular User
+}

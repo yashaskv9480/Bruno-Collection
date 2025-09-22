@@ -1,0 +1,19 @@
+meta {
+  name: Associate User with the Organization
+  type: http
+  seq: 20
+}
+
+put {
+  url: {{base_url}}/v2/organizations/:guid/users/:user_guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Associate User with the Organization
+}

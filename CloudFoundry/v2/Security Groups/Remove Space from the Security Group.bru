@@ -1,0 +1,19 @@
+meta {
+  name: Remove Space from the Security Group
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{base_url}}/v2/security_groups/:guid/spaces/:space_guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Remove Space from the Security Group
+}

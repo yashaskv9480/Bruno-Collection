@@ -1,0 +1,19 @@
+meta {
+  name: Downloads the staged droplet for an App
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/v2/apps/:guid/droplet/download
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Downloads the staged droplet for an App
+}

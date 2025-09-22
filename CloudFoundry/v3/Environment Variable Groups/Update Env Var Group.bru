@@ -1,0 +1,15 @@
+meta {
+  name: Update Env Var Group
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{base_url}}/v3/environment_variable_groups/:name
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

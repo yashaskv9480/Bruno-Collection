@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Cloud Foundry V3 API (Main Endpoints Expanded)",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

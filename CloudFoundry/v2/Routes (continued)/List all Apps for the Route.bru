@@ -1,0 +1,19 @@
+meta {
+  name: List all Apps for the Route
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v2/routes/:guid/apps
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Apps for the Route
+}

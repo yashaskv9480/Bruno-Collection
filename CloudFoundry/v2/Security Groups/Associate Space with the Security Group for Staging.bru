@@ -1,0 +1,19 @@
+meta {
+  name: Associate Space with the Security Group for Staging
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/v2/security_groups/:guid/staging_spaces/:space_guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Associate Space with the Security Group for Staging
+}

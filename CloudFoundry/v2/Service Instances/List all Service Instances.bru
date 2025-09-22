@@ -1,0 +1,19 @@
+meta {
+  name: List all Service Instances
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/v2/service_instances
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Service Instances
+}

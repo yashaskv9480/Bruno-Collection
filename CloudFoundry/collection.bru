@@ -1,0 +1,11 @@
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{cf_token}}
+}
+
+vars:pre-request {
+  base_url: https://api.cf.{{region}}.hana.ondemand.com
+}

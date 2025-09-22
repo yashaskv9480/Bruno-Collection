@@ -1,0 +1,19 @@
+meta {
+  name: List all Service Bindings for the Service Instance
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/v2/service_instances/:guid/service_bindings
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  List all Service Bindings for the Service Instance
+}

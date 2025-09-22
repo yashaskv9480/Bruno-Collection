@@ -1,0 +1,19 @@
+meta {
+  name: Get contents of the running environment variable group
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v2/config/environment_variable_groups/running
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get contents of the running environment variable group
+}

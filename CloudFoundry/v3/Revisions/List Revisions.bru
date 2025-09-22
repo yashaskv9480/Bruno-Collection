@@ -1,0 +1,15 @@
+meta {
+  name: List Revisions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v3/revisions
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a Particular Route Mapping
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/v2/route_mappings/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Retrieve a Particular Route Mapping
+}

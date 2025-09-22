@@ -1,0 +1,15 @@
+meta {
+  name: Delete Service Broker
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/v3/service_brokers/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

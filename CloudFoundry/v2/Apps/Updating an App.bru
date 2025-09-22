@@ -1,0 +1,19 @@
+meta {
+  name: Updating an App
+  type: http
+  seq: 20
+}
+
+put {
+  url: {{base_url}}/v2/apps/:guid
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Updating an App
+}
