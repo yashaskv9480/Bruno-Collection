@@ -1,0 +1,17 @@
+meta {
+  name: MEND 1.3/1.4
+}
+
+auth {
+  mode: none
+}
+
+vars:pre-request {
+  MEND_BASE_URL_1.4: https://sap.whitesourcesoftware.com/api/v1.4
+  USER_KEY: {{process.env.MEND_USER_KEY}}
+  DXI_PRODUCT_KEY: {{process.env.DXI_PRODUCT_KEY}}
+  SHC_PROD_PRODUCT_KEY: {{process.env.SHC_PROD_PRODUCT_KEY}}
+  SHC_DEV_PRODUCT_KEY: {{process.env.SHC_DEV_PRODUCT_KEY}}
+  DXI-PRODUCT-KEY: 
+  MEND_baseUrl_1.4: 
+}

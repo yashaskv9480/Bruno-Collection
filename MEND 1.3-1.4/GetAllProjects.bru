@@ -1,0 +1,25 @@
+meta {
+  name: GetAllProjects
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{MEND_baseUrl_1.4}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "requestType":"getAllProjects",
+    "userKey": {{USER_KEY}}, 
+    "projectToken":"",
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

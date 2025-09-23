@@ -1,0 +1,23 @@
+meta {
+  name: Credential Store for Applications
+}
+
+auth {
+  mode: basic
+}
+
+auth:basic {
+  username: {{process.env.us30_dev_credstore_username}}
+  password: {{process.env.us30_dev_credstore_password}}
+}
+
+vars:pre-request {
+  baseUrl: https://credstore.cfapps.{{region}}.hana.ondemand.com/api/v1
+  credstore_username: {{region}}_{{env}}_credstore_username
+}
+
+script:pre-request {
+  
+  
+  
+}

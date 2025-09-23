@@ -1,0 +1,23 @@
+meta {
+  name: Get All User ASSIGNments
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{MEND_BASE_URL_1.4}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "requestType":"getProductAssignments",
+      "userKey": {{USER_KEY}}, 
+      "productToken": {{SHC_DEV_PRODUCT_KEY}}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
