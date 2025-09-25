@@ -1,8 +1,24 @@
 meta {
   name: ANS
-  seq: 1
+  seq: 4
+}
+
+headers {
+  x-csrf-token: {{csrf_token}}
 }
 
 auth {
-  mode: inherit
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+script:pre-request {
+  const tools = require('./scripts/access-token');
+  await tools.login();
+  
+  const csrfToken = require('./scripts/ans-fetch-csrf-token');
+  await csrfToken.fetchCsrfToken();
 }

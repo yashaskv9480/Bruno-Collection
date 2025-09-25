@@ -1,17 +1,21 @@
 meta {
-  name: get csrf token
+  name: ANS - Get Csrf Token
   type: http
-  seq: 5
+  seq: 1
 }
 
 head {
   url: https://clm-sl-ans-live-ans-service-api.cfapps.{{region}}.hana.ondemand.com/v2/Notification.svc
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 headers {
   X-Csrf-Token: Fetch
+}
+
+auth:bearer {
+  token: {{access_token}}
 }
 
 settings {

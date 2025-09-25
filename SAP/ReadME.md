@@ -59,12 +59,6 @@ vars {
   region: us30
   authenticator: papmcloud
 }
-vars:secret [
-  jobscheduler_client_id_prod,
-  jobscheduler_client_secret_prod,
-  myservice_client_id_prod,        # Add this
-  myservice_client_secret_prod     # Add this
-]
 ```
 
 ### Step 3: Create API Endpoints
@@ -99,10 +93,7 @@ vars {
   region: eu10
   authenticator: papmcloud
 }
-vars:secret [
-  myservice_client_id_prod,
-  myservice_client_secret_prod
-]
+
 ```
 
 ---

@@ -16,4 +16,4 @@ These API collections were generated using **Comet** from the official Cloud Fou
 
 ## To use
 
-- **Authentication**: Add your `username` and `password` in the `.env` file. The `grant_type=password` flow is used to generate a token, which is then attached as a Bearer Token for all API requests.
+- **Authentication**: Add your `username` and `password` in the `.env` file. And add it in **Authorization request** and fire any apis. The `grant_type=password` flow is used to generate a token, which is then attached as a Bearer Token for all API requests.
